@@ -37,7 +37,7 @@ RUN opam init -a --disable-sandboxing && \
     opam update -y && \
     opam upgrade -y && \
     eval $(opam env) && \
-    opam install -y core core_unix menhir ppx_blob ppx_deriving ppx_inline_test ppx_let shexp yojson utop ounit2 ocaml-lsp-server ocamlformat domainslib && \
+    opam install -y core core_unix menhir ppx_blob ppx_deriving ppx_inline_test ppx_let shexp yojson utop ounit2 ocaml-lsp-server ocamlformat domainslib --no-checksums && \
     eval $(opam env)
 
 CMD ["zsh"]
