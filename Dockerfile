@@ -29,7 +29,7 @@ RUN opam init -a --disable-sandboxing && \
     opam upgrade -y && \
     eval $(opam env) && \
     opam switch create 5.0.0 && \
-    eval $(opam env) && \
+    eval (opam env --switch=5.0.0) && \
     opam install -y core core_unix menhir ppx_blob ppx_deriving ppx_inline_test ppx_let shexp yojson utop ounit2 ocaml-lsp-server ocamlformat domainslib && \
     eval $(opam env)
 
