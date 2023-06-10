@@ -1,6 +1,6 @@
 {
   "name": "CS1260 Dev Container",
-  "image": "ghcr.io/browncs1260/devcontainer",
+  "image": "ghcr.io/browncs1260/devcontainer:main",
   "customizations": {
     "vscode": {
       "settings": {
