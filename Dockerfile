@@ -23,17 +23,17 @@ SHELL ["/bin/zsh", "-c"]
 RUN sudo apt-get install -y build-essential nasm opam m4 python3.9
 
 # Sets up OCaml
-RUN opam init -a --disable-sandboxing && \
-    eval $(opam env) && \
-    opam update -y && \
-    opam upgrade -y && \
-    eval $(opam env) && \
-    opam switch create 5.0.0 && \
-    eval $(opam env --switch=5.0.0) && \
-    opam update -y && \
-    opam upgrade -y && \
-    eval $(opam env) && \
-    opam install -y core core_unix menhir ppx_blob ppx_deriving ppx_inline_test ppx_let shexp yojson utop ounit2 ocaml-lsp-server ocamlformat domainslib && \
-    eval $(opam env)
+# RUN opam init -a --disable-sandboxing && \
+#     eval $(opam env) && \
+#     opam update -y && \
+#     opam upgrade -y && \
+#     eval $(opam env) && \
+#     opam switch create 5.0.0 && \
+#     eval $(opam env --switch=5.0.0) && \
+#     opam update -y && \
+#     opam upgrade -y && \
+#     eval $(opam env) && \
+#     opam install -y core core_unix menhir ppx_blob ppx_deriving ppx_inline_test ppx_let shexp yojson utop ounit2 ocaml-lsp-server ocamlformat domainslib && \
+#     eval $(opam env)
 
 CMD ["zsh"]
