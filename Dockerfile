@@ -1,6 +1,6 @@
 FROM debian:stable
 
-ARG username=student
+ARG username=cs1260_user
 ARG tz=America/New_York
 ENV TZ=${TZ}
 ENV DEBIAN_FRONTEND="noninteractive" TZ="$tz"
