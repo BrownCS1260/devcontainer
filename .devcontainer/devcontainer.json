@@ -1,6 +1,11 @@
 {
   "name": "CS1260 Dev Container",
   "image": "ghcr.io/browncs1260/devcontainer:main",
+    "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "version": "latest"
+    }
+},
   "customizations": {
     "vscode": {
       "settings": {
