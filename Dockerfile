@@ -20,7 +20,7 @@ WORKDIR /home/$username
 SHELL ["/bin/zsh", "-c"]
 
 # C/C++ Tools and OCaml
-RUN sudo apt-get install -y build-essential nasm opam m4 python3.9
+RUN sudo apt-get install -y build-essential nasm opam m4 python3
 
 # Sets up OCaml
 RUN opam init -a --disable-sandboxing && \
