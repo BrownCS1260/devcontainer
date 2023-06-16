@@ -30,10 +30,14 @@ RUN opam init -a --disable-sandboxing && \
     eval $(opam env) && \
     opam switch create 5.0.0 && \
     eval $(opam env --switch=5.0.0) && \
+    # The janestreet-bleeding repo has packages that are not yet merged into the official opam repo,
+    # which is required for OCaml 5.0.0 compatability. Specifically shexp requires posixat 0.16.0+. 
+    # For some reason official repo versions cause bugs and issues. 
+    opam repo add janestreet-bleeding https://ocaml.janestreet.com/opam-repository && \
     opam update -y && \
     opam upgrade -y && \
     eval $(opam env) && \
-    opam install -y core core_unix menhir ppx_blob ppx_deriving ppx_inline_test ppx_let shexp yojson utop ounit2 ocaml-lsp-server ocamlformat domainslib && \
+    opam install -y core core_unix menhir ppx_blob ppx_deriving ppx_inline_test ppx_let shexp yojson utop ounit2 ocaml-lsp-server ocamlformat domainslib --no-checksums && \
     eval $(opam env)
 
 CMD ["zsh"]
