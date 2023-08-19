@@ -1,32 +1,28 @@
 {
   "name": "CS1260 Dev Container",
-  "image": "ghcr.io/browncs1260/devcontainer:main",
-    "features": {
+  "image": "jiahuac/cs1260:main",
+  "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
       "version": "latest"
     }
-},
+  },
   "customizations": {
     "vscode": {
       "settings": {
         "git.autofetch": true,
-        "[cpp]": {
-          "editor.defaultFormatter": "xaver.clang-format"
-        },
         "editor.codeActionsOnSave": {
           "source.fixAll": true,
           "source.organizeImports": true,
           "source.sortMembers": true
         },
         "editor.formatOnSave": true,
-        "extensions.ignoreRecommendations": true,
-        "ms-vscode.cpptools.includePath": ["${workspaceFolder}/**"]
+        "extensions.ignoreRecommendations": true
       },
       "extensions": [
-        "ms-vscode.cpptools-extension-pack",
-        "jeff-hykin.better-cpp-syntax",
+        "ocamllabs.ocaml-platform",
         "eamodio.gitlens",
-        "wayou.vscode-todo-highlight"
+        "gruntfuggly.todo-tree",
+        "yzhang.markdown-all-in-one"
       ]
     }
   }
