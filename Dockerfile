@@ -30,4 +30,5 @@ RUN opam init -a --disable-sandboxing && \
     # which is required for OCaml 5.0.0 compatability. Specifically shexp requires posixat 0.16.0+.
     # For some reason official repo versions cause bugs and issues.
     opam repo add janestreet-bleeding https://ocaml.janestreet.com/opam-repository && \
-    opam install -y core core_unix menhir ppx_blob ppx_deriving ppx_inline_test ppx_let shexp yojson utop ounit2 ocaml-lsp-server ocamlformat domainslib
+    opam install -y core core_unix menhir ppx_blob ppx_deriving ppx_inline_test ppx_let shexp yojson utop ounit2 ocaml-lsp-server ocamlformat domainslib && \
+    opam pin add ocamlformat 0.25.1
