@@ -1,3 +1,5 @@
+[![Build and Publish Docker](https://github.com/BrownCS1260/devcontainer/actions/workflows/docker-image.yml/badge.svg)](https://github.com/BrownCS1260/devcontainer/actions/workflows/docker-image.yml)
+
 # The cs1260 Devcontainer
 
 This is the definition of the cs1260 Docker image and devcontainer. Devcontainers (as well as GitHub Codespaces, which relies on devcontainers) provide a simple one-click install solution to set up a development environment. In this case, it sets up the compilers and tools necessary for cs1260. 
