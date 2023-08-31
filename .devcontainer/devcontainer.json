@@ -26,5 +26,5 @@
       ]
     }
   },
-  "postStartCommand": "opam init --shell-setup"
+  "postStartCommand": "opam init --dot-profile=~/.zshrc --shell-setup"
 }
