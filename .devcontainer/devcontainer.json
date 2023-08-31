@@ -25,5 +25,6 @@
         "yzhang.markdown-all-in-one"
       ]
     }
-  }
+  },
+  "postStartCommand": "opam init --shell-setup"
 }
