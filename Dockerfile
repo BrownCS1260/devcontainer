@@ -11,8 +11,7 @@ RUN apt-get -y update && apt-get --fix-broken install -y \
     # Adds a user and creates a home directory
     useradd -ms /usr/bin/zsh $username && \
     # Sets up the user as a sudoer
-    echo " ${username} ALL=(ALL) NOPASSWD: ALL" >>/etc/sudoers && \
-    mkdir -m 1777 /__w
+    echo " ${username} ALL=(ALL) NOPASSWD: ALL" >>/etc/sudoers
 
 USER $username
 WORKDIR /home/$username
