@@ -18,7 +18,7 @@ WORKDIR /home/$username
 SHELL ["/bin/zsh", "-c"]
 
 # C/C++ Tools and OCaml
-RUN sudo apt-get -y update && sudo apt-get install -y build-essential nasm opam m4 python3 clang clang-format
+RUN sudo apt-get -y update && sudo apt-get install -y build-essential nasm opam m4 python3 clang clang-format gdb
 
 # Sets up OCaml
 RUN opam init -a --disable-sandboxing && \
