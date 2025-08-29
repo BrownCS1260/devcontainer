@@ -1,6 +1,8 @@
 {
   "name": "CS1260 Dev Container",
   "image": "jiahuac/cs1260:main",
+  "features": {
+  },
   "customizations": {
     "vscode": {
       "settings": {
